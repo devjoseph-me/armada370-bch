@@ -78,12 +78,22 @@ ed c4 08 be 6c 6f c1 f8  3e 12 58 5d 1b d7 cf e8
 
 # 코드 빌드 방법
 
+- 코드는 일반적인 Binary BCH 에 대한 구현이다.
+- 예제로 00으로 채워진 데이터와 ff로 채워진 데이터에 대한 ECC 생성값, 그리고 Target 과의 XOR 비교를 출력한다.
 
 ```bash
 $ make && ./bch_test
 
 FILLED 00) DUMP:77 5d f9 64 6c 5c 3d 97 09 ba c1 f2 2d 25 b5 07 62 66 d4 66 65 d5 9f 73 85 57 c5 55 7e 45 
+=> Normal BCH 로 생성된 ECC 코드
+
 DIFF FROM TARGET) DUMP:99 f6 00 06 0f ff f6 09 00 6f f9 06 66 6f 6f 09 06 00 66 00 0f 6f 00 9f 9f f9 ff ff 99 6f 
+=> Target BCH 와의 XOR 비교
+
+
 FILLED FF) DUMP:ed c4 08 be 6c 6f c1 f8 3e 12 58 5d 1b d7 cf e8 12 14 e8 99 01 9f 53 ed a4 5d 7f 5c 87 fc 
+=> Normal BCH 로 생성된 ECC 코드
+
 DIFF FROM TARGET) DUMP:96 f6 09 69 0f 00 f9 09 f9 96 f9 f6 96 69 f0 99 96 96 99 00 09 00 ff 96 f6 f6 90 ff 99 0f 
+=> Target BCH 와의 XOR 비교
 ```
