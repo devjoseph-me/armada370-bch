@@ -2,7 +2,7 @@
 
 TARGET 의 BCH 는 일반적인 Binary BCH 코드와는 차이가 있다.
 
-하지만 m=15,t=16,size=(2048+32) 으로 BCH ECC 코드를 생성했을 때,
+하지만 m=15,t=16,size=(2048+32),prim_poly=0x8003 으로 BCH ECC 코드를 생성했을 때,
 
 Normal BCH 와 Target BCH 의 XOR 차이가 특정 패턴을 보인다.
 
